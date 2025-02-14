@@ -98,9 +98,11 @@ func main() {
 				viewingNote = true
 			}
 
-			if rl.IsKeyPressed(rl.KeyQ) {
-				advancedControls = !advancedControls
-			}
+			/*
+				if rl.IsKeyPressed(rl.KeyQ) {
+					advancedControls = !advancedControls
+				}
+			*/
 
 			if rl.IsKeyPressed(rl.KeyE) && nearestNote != -1 {
 				viewedText = notes[nearestNote].Text()
@@ -193,8 +195,8 @@ func main() {
 
 			// draw controls
 			if showControls {
-				rl.DrawRectangle(5, 5, 250, 115, rl.Fade(rl.SkyBlue, 0.5))
-				rl.DrawRectangleLines(5, 5, 250, 115, rl.Blue)
+				rl.DrawRectangle(5, 5, 265, 115, rl.Fade(rl.SkyBlue, 0.5))
+				rl.DrawRectangleLines(5, 5, 265, 115, rl.Blue)
 
 				if advancedControls {
 					rl.DrawText("Controls(advanced):", 15, 15, 10, rl.Black)
@@ -206,10 +208,10 @@ func main() {
 					rl.DrawText("- Look around: arrow keys", 15, 45, 10, rl.Black)
 				}
 
-				rl.DrawText("- Turn advanced on/off (off by default): Q", 15, 60, 10, rl.Black)
-				rl.DrawText("- Show controls on/off: C", 15, 75, 10, rl.Black)
-				rl.DrawText("- Interact: E", 15, 90, 10, rl.Black)
-				rl.DrawText("- Exit game or menus: Escape", 15, 105, 10, rl.Black)
+				// rl.DrawText("- Turn advanced on/off (off by default), WIP: Q", 15, 60, 10, rl.Black)
+				rl.DrawText("- Show controls on/off: C", 15, 60, 10, rl.Black)
+				rl.DrawText("- Interact: E", 15, 75, 10, rl.Black)
+				rl.DrawText("- Exit game or menus: Escape", 15, 90, 10, rl.Black)
 			}
 
 			// draw debug info
