@@ -23,3 +23,6 @@ __pycache__
 *.exe
 # binary files
 *.bin
+
+# the real notes file, which gets included with the released executables
+notes.txt
